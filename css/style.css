@@ -3,52 +3,150 @@
     padding: 0;
     box-sizing: border-box;
 }
-body, .container{
-    background-color: #24353f;
+::placeholder{
+    color: #bfc1c8 !important;
 }
-.container{
-    box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+
+/* Navbar */
+.navbar,.navbar-brand, .nav-link{
+    color:white;
 }
-.inp, .btn{
-    width:90%;
-    display: block;
+.nav-link:hover{
+    color:#a3c5ff;
+    border: 2px solid #375894;
+    border-radius: 100vh;
+}
+.navbar-brand:hover{
+    color:white;
+}
+.navbar i{
+    font-size: 60px;
+}
+
+/* Search Bar */
+.contain{
+    background:url(../media/sky\ 2.jpg) no-repeat fixed;
+    background-size: cover;
 }
 .btn{
-    border-color: #17a2b8;
-    transition: 0.5s;
+    top: 5px;
+    right: 5px;
+    background-color: rgb(163, 197, 255);
+    color: white;
+    font-size: 10px;
 }
-.btn:hover{
-background-color: #17a2b8;
-.color{
-    color:aliceblue;
-}
-}
-.inp{
-    background-color:  transparent !important;
-    border-color: rgb(181, 180, 180);
+.btn:focus{
     color: white !important;
 }
-.inp::placeholder{
-    color:rgb(181, 180, 180);
+.btn:hover{
+    background-color: rgb(154, 247, 176)
 }
-.color{
-    color:#17a2b8;
+input:focus{
+    border: 2px solid rgba(163, 197, 255, 0.7) !important;
+    color: #a3c5ff !important;
 }
-.signUp{
-    text-decoration: none;
+
+
+/* Three Days Divs */
+.day{
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5%;
 }
-.signUp:hover{
-    text-decoration:underline;
+.icn i{
+    font-size: 50px;
 }
-.navbar .btn{
-    width: 80px;
-    border-color: #ffc107;
-    color: rgb(168, 168, 168);
+.day .dayContent span{
+    color: rgb(9, 153, 243);
 }
-.navbar{
-    background-color: #24353f;
+.dayFooter i{
+    color: rgb(121, 121, 121);
 }
-.navbar .btn:hover{
-    background-color: #ffc107;
+.dayFooter span{
+    color: rgb(156, 156, 156);
+}
+.threeContainers{
+    --gap: 30px;
+    gap: var(--gap);
+    width: calc(100% - (calc(var(--gap)*2)));
+}
+.threeContainers .day{
+    width: calc( calc(100% - (calc(var(--gap) * 2))) / 3);
+}
+@media (max-width: 990px){
+    .threeContainers .day{
+        width:  calc( calc(100% - (calc(var(--gap) * 2))) / 2);
+    }
+    
+}
+@media (max-width: 800px){
+    .threeContainers .day{
+        width:  calc(100% - (calc(var(--gap) * 2)));
+    }
+    
+}
+
+/* .collapse p{
+    font-size:.6rem!important ;
+    color:gray;
+}
+form .search{
+    outline: none;
+}
+.searchBar::placeholder{
+    color: gray;
+}
+.table .tableNav{
+    border-top-left-radius: 0.5rem;
+}
+.tableNav{
+    background-color: #242630;
+}
+.threeTables span{
+    color:  #bfc1c8;
+}
+.tableBody{
+    background-color: #282a36;
+}
+.darkClrNav{
+   background-color: #1b1e27; 
+}
+.darkClrBody{
+    background-color: #1e212b;
+}
+.thirdTable .tableNav{
+    border-top-right-radius: 0.5rem;
+}
+.degree{
+    font-size: 5rem;
+}
+.secondTable p, .thirdTable p{
+    color:  #bfc1c8;
+} */
+
+/* Footer */
+footer p{
+color: #bfc1c8;
+}
+
+footer .btn{
+    margin-top: 1.5rem;
+}
+footer .circle{
+    width: 40px;
+    height: 40px;
+    background-color: #1e202b;
+    border-radius: 50%;
+    cursor: pointer;
+}
+i{
+    color:#a3c5ff;
+}
+.circle, i{
+    transition: 0.25s; 
+}
+footer .circle:hover{
+    background-color: #375894;       
+}
+footer .circle:hover i{
     color: white;
 }
